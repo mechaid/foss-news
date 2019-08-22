@@ -1,0 +1,34 @@
+{{ define "main" }}
+  <section class="section" id="header-section">
+    <div class="container is-widescreen">
+      <nav class="navbar" id="mobile-navigation">
+        <div class="navbar-brand">
+          <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </a>
+          <a class="navbar-item" id="logo"><h1>{{ .Site.Title }}</h1></a>
+        </div>
+      </nav>
+    </div>
+  </section>
+  <section class="section">
+    <div class="container is-widescreen">
+      <div class="columns">
+        <div class="column">
+          <ul>
+          <!-- Ranges through content/posts/*.md -->
+          {{ range .Pages }}
+              <li>
+                  <a href="{{.Permalink}}">{{.Date.Format "2006-01-02"}} - {{.Title}}</a>
+              </li>
+          {{ end }}
+          </ul>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+{{ end }}
