@@ -1,11 +1,17 @@
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Merriweather', serif;
+  /* font-family: 'Open Sans', sans-serif; */
   color: #666;
 }
 
 h2, h3, h4, h5, h6 {
-  font-family: 'Source Serif Pro', serif;
+  font-weight: bold;
+  font-family: 'Playfair Display', serif;
   color: #000;
+}
+
+h1, h2 {
+  font-size: 1.25rem;
 }
 
 #header-section {
@@ -26,8 +32,25 @@ h2, h3, h4, h5, h6 {
   position: relative;
 }
 
-#logo h1 {
+#logo {
   color: #000;
   font-family: 'Cinzel', serif;
   font-size: 1.25em;
+}
+
+#main-section {
+  padding: 0em;
+}
+
+.content-box-list > .columns {
+  padding: 12px 2.25em;  
+}
+
+.content-box-list > .columns > .column {
+  border-bottom: #ccc solid 1px;
+  padding: 0.5em 0em 1em 0em;
+}
+
+.content-box-list > .columns > .column h2 {
+  margin-bottom: 0.5em;
 }

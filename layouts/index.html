@@ -13,20 +13,22 @@
       </nav>
     </div>
   </section>
-  <section class="section">
+  <section class="section" id="main-section">
     <div class="container is-widescreen">
       <div class="columns">
-        <div class="column">
-          <ul>
-          <!-- Ranges through content/posts/*.md -->
-          {{ range .Pages }}
-              <li>
-                  <a href="{{.Permalink}}">{{.Date.Format "2006-01-02"}} - {{.Title}}</a>
-              </li>
-          {{ end }}
-          </ul>
-
+        <!-- Ranges through content/posts/*.md -->
+        {{ range first 10 .Pages }}
+        <div class="column content-box-list">
+          <img src="https://static01.nyt.com/images/2019/08/22/us/22ransomware-02/22ransomware-02-threeByTwoLargeAt2X.jpg?quality=75&auto=webp&disable=upscale&width=1620" />
+          <div class="columns">
+            <div class="column has-text-justified">
+              <a href="{{.Permalink}}"><h2>{{.Title}}</h2></a>
+              {{ .Summary }}
+            </div>
+          </div>
         </div>
+        {{ end }}
+
       </div>
     </div>
   </section>
